@@ -1,0 +1,8 @@
+services:
+  clientService: "services.impl.ClientServiceImpl"
+  userService: "services.impl.UserServiceImpl"
+  userRepository: "repositories.impl.UserRepositoryImpl"
+  clientRepository: "repositories.impl.ClientRepositoryImpl"
+  clientView: "views.impl.ClientViewImpl"
+
+

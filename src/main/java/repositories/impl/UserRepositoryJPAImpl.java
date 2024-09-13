@@ -1,10 +1,11 @@
-package repositories;
+package repositories.impl;
 
 import entities.User;
+import repositories.UserRepository;
 
 import java.util.List;
 
-public class UserRepositoryJDBCImpl implements UserRepository {
+public class UserRepositoryJPAImpl  implements UserRepository {
     @Override
     public void save(User user) {
 

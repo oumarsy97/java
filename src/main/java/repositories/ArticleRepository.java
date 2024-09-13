@@ -4,7 +4,7 @@ import entities.Article;
 
 import java.util.List;
 
-interface ArticleRepository{
+public interface ArticleRepository{
     void save(Article obj);
     void deleteById(int id);
     void update(int id,Article obj);

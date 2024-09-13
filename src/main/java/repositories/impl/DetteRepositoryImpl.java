@@ -1,4 +1,4 @@
-package repositories.Impl;
+package repositories.impl;
 
 public class DetteRepositoryImpl {
 }

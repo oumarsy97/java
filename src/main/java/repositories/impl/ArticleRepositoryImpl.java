@@ -1,11 +1,12 @@
-package repositories;
+package repositories.impl;
 
 import entities.Article;
+import repositories.ArticleRepository;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ArticleRepositoryImpl implements ArticleRepository{
+public class ArticleRepositoryImpl implements ArticleRepository {
     private final List<Article> articles = new ArrayList<>();
 
     public ArticleRepositoryImpl () {

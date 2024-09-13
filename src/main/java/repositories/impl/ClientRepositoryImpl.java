@@ -1,11 +1,10 @@
-package repositories;
-
+package repositories.impl;
 import entities.Client;
-
+import repositories.ClientRepository;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ClientRepositoryImpl implements ClientRepository{
+public class ClientRepositoryImpl implements ClientRepository {
     private final List<Client> clients;
     public ClientRepositoryImpl() {
         clients = new ArrayList<>();
@@ -38,7 +37,7 @@ public class ClientRepositoryImpl implements ClientRepository{
 
     @Override
     public void deleteAll() {
-    clients.clear();
+        clients.clear();
     }
 
     @Override

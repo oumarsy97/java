@@ -1,9 +1,0 @@
-# application.yaml
-services:
-  clientService: "ClientServiceImpl"  # Ou tu peux changer l'implémentation ici
-  detteService: "DetteServiceImpl"
-  paiementService: "PaiementServiceImpl"
-
-repositories:
-  clientRepository: "ClientRepositoryImpl"
-  detteRepository: "DetteRepositoryImpl"

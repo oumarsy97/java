@@ -1,5 +1,6 @@
 package org.example;
 
+import config.AppConfig;
 import services.ClientService;
 import services.UserService;
 
@@ -7,8 +8,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-    ClientService clientService = new ClientService(client);
-    UserService user = new UserService();
+        UserService userService = AppConfig.getInstance("userService", UserService.class);
+        ClientService clientService = AppConfig.getInstance("clientService", ClientService.class);
+        System.out.println("Starting");
+
         Scanner scanner = new Scanner(System.in);
         boolean running = true;
 
@@ -58,7 +61,7 @@ public class Main {
                     String login = scanner.nextLine();
                     System.out.println("donner le mot de passe du utilisateur");
                     String password = scanner.nextLine();
-                    userService
+
 
 
 

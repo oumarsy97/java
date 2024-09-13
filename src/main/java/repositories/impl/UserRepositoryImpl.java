@@ -1,13 +1,16 @@
-package repositories;
+package repositories.impl;
 
-import entities.Article;
 import entities.User;
+import repositories.UserRepository;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 public class UserRepositoryImpl implements UserRepository {
-    private List<User> users;
+    private final List<User> users;
+    public UserRepositoryImpl() {
+        users = new ArrayList<>();
+    }
 
     @Override
     public void save(User user) {

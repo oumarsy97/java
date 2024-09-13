@@ -1,4 +1,4 @@
-package services;
+/*package services;
 
 import repositories.ArticleRepository;
 import java.util.List;
@@ -7,9 +7,9 @@ import entities.Article;
 
 
 public class ArticleService {
-    private final ArticleRepository articleRepository;
+    private final   ArticleRepository articleRepository;
     public ArticleService() {
-        this.articleRepository = new ArticleRepository();
+
     }
     public List<Article> findAll() {
         return articleRepository.findAll();
@@ -27,3 +27,4 @@ public class ArticleService {
     }
 
 }
+*/

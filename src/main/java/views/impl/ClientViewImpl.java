@@ -3,6 +3,8 @@ package views.impl;
 import entities.Client;
 import views.ClientView;
 
+import java.util.List;
+
 public class ClientViewImpl implements ClientView {
     @Override
     public void create(Client value) {
@@ -12,27 +14,44 @@ public class ClientViewImpl implements ClientView {
                 ", Téléphone : " + value.getTelephone() +
                 ", Adresse : " + value.getAdresse()
         );
+    }
 
+    @Override
+    public void destroy(Client client) {
+        System.out.println("Client"+client.getSurnom()+" supprimé avec succés");
 
     }
 
     @Override
-    public void destroy() {
+    public void update( Client client) {
+        System.out.println("Client "+client.getSurnom()+" mis à jour : " +
+                "ID : " + client.getId() +
+                ", Surnom : " + client.getSurnom() +
+                ", Téléphone : " + client.getTelephone() +
+                ", Adresse : " + client.getAdresse()
+        );
 
     }
 
-    @Override
-    public void update(Object value) {
 
+
+
+    @Override
+    public void getAll(List<Client> clients) {
+        for (Client client : clients) {
+            show(client);
+            System.out.println("------------------------");
+        }
     }
 
-    @Override
-    public Object getValue() {
-        return null;
-    }
 
     @Override
-    public void show() {
-
+    public void show(Client client) {
+        System.out.println("Client : " +
+                "ID : " + client.getId() +
+                ", Surnom : " + client.getSurnom() +
+                ", Téléphone : " + client.getTelephone() +
+                ", Adresse : " + client.getAdresse()
+        );
     }
 }

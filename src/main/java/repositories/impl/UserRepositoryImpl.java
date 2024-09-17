@@ -7,14 +7,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserRepositoryImpl implements UserRepository {
+    private static int lastUserId = 0;
     private final List<User> users;
     public UserRepositoryImpl() {
         users = new ArrayList<>();
     }
 
+    public static int getLastUserId() {
+        return lastUserId;
+    }
+
+    public static void setLastUserId(int lastUserId) {
+        UserRepositoryImpl.lastUserId = lastUserId;
+    }
+
     @Override
     public void save(User user) {
         users.add(user);
+        lastUserId = user.getId();
     }
 
     @Override
@@ -43,4 +53,11 @@ public class UserRepositoryImpl implements UserRepository {
     public List<User> getAllUsers() {
         return  users;
     }
+
+
+    public static int lastInsertId(){
+        return lastUserId;
+    }
+
+
 }

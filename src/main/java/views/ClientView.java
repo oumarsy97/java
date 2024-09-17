@@ -2,11 +2,13 @@ package views;
 
 import entities.Client;
 
+import java.util.List;
+
 public interface ClientView {
     public void create(Client value);
-    public void destroy();
-    public void update(Object value);
-    public Object getValue();
-    public void show();
+    public void destroy(Client client);
+    public void update(Client client);
+    public void show(Client client);
+    public void getAll(List<Client> clients);
 
 }

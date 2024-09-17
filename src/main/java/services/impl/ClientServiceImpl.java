@@ -1,6 +1,7 @@
 package services.impl;
 
 import entities.Client;
+import entities.User;
 import repositories.ClientRepository;
 import services.ClientService;
 import views.ClientView;
@@ -17,16 +18,18 @@ public class ClientServiceImpl  implements ClientService {
     }
 
     @Override
-    public void addClient(String surnom, String telephone, String adresse) {
+    public Client addClient(String surnom, String telephone, String adresse) {
         int index = clientRepository.getAllClients().size() +  1;
         Client client = new Client(index,surnom,telephone,adresse);
         clientRepository.save(client);
-        clientView.create(client);
+       return client;
     }
 
     @Override
     public List<Client> getAllClients() {
-        return List.of();
+       List<Client> clients = clientRepository.getAllClients();
+       clientView.getAll(clients);
+       return clients;
     }
 
     @Override
@@ -42,5 +45,13 @@ public class ClientServiceImpl  implements ClientService {
     @Override
     public void deleteClient(int id) {
 
+    }
+
+    @Override
+    public void addUserToClient(int idClient, User user) {
+     Client client = clientRepository.findById(idClient);
+        client.setUserId(user.getId());
+        //update client
+        clientRepository.update(idClient, client);
     }
 }

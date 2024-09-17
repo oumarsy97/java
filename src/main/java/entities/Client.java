@@ -5,12 +5,22 @@ public class Client {
     private String surnom;
     private String telephone ;
     private String adresse;
+    private long userId;
 
     public Client(int id, String surnom, String telephone, String adresse) {
         this.id = id;
         this.surnom = surnom;
         this.telephone = telephone;
         this.adresse = adresse;
+
+    }
+
+    public void setUserId(long userId) {
+        this.userId = userId;
+    }
+
+    public long getUserId() {
+        return userId;
     }
 
     public int getId() {

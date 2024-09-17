@@ -13,4 +13,8 @@ public interface UserRepository {
     User findById(int id);
     void deleteAll();
     List<User> getAllUsers();
+
+    public static int lastInsertId() {
+        return 0;
+    }
 }

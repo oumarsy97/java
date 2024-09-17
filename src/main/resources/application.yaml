@@ -4,5 +4,5 @@ services:
   userRepository: "repositories.impl.UserRepositoryImpl"
   clientRepository: "repositories.impl.ClientRepositoryImpl"
   clientView: "views.impl.ClientViewImpl"
-
-
+  clientController: "controllers.ClientController"
+  AccessDB: "repositories.impl.MysqlCon"

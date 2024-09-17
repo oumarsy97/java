@@ -42,6 +42,6 @@ public class ClientRepositoryImpl implements ClientRepository {
 
     @Override
     public List<Client> getAllClients() {
-        return List.of();
+        return clients;
     }
 }

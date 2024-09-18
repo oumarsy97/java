@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DatabaseToolSources">
+    <data-source name="localhost" uuid="bede0d99-e2ce-4d93-9d5d-bee59cedf7b5" type="MYSQL">
+      <base-info connect-type="DB_DEFAULT" product="MySQL" version="8.0.37-0ubuntu0.22.04.3" major-version="8" minor-version="0" jdbc-name="MySQL Connector/J" jdbc-version="mysql-connector-j-8.2.0 (Revision: 06a1f724497fd81c6a659131fda822c9e5085b6c)" jdbc-major-version="8" jdbc-minor-version="2" />
+      <user-name>oumar</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema">
+            <name qname="dbJava" operator="@" />
+            <name qname="Auchan" operator="@" />
+            <name qname="DBRV" operator="@" />
+            <name qname="Gestion_Commercial" operator="@" />
+            <name qname="Ndekki" operator="@" />
+            <name qname="appro" operator="@" />
+            <name qname="auchan_correction" operator="@" />
+            <name qname="dbprisma" operator="@" />
+            <name qname="dbproject" operator="@" />
+            <name qname="gestionEcole" operator="@" />
+            <name qname="gestiondette" operator="@" />
+            <name qname="laravel" operator="@" />
+            <name qname="mydb" operator="@" />
+            <name qname="mysql" operator="@" />
+            <name qname="performance_schema" operator="@" />
+            <name qname="phpmyadmin" operator="@" />
+            <name qname="sys" operator="@" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+      <choose-schema-mapping>
+        <introspection-scope>
+          <node kind="schema">
+            <name qname="dbJava" operator="@" />
+          </node>
+        </introspection-scope>
+      </choose-schema-mapping>
+      <url>jdbc:mysql://localhost:3306/dbJava</url>
+      <remarks />
+      <vm-options />
+      <driver-info id="mysql8" />
+      <ssh-properties enabled="false" />
+      <jdbc-additional-properties>
+        <property name="characterSetResults" value="utf8" />
+        <property name="serverTimezone" value="Africa/Dakar" />
+        <property name="zeroDateTimeBehavior" value="CONVERT_TO_NULL" />
+        <property name="characterEncoding" value="utf8" />
+        <property name="useTimezone" value="true" />
+        <property name="yearIsDateType" value="false" />
+      </jdbc-additional-properties>
+      <ssl-config enabled="false">
+        <uuid />
+        <caFile />
+        <clientCertificateFile />
+        <clientKeyFile />
+        <sslMode>REQUIRE</sslMode>
+      </ssl-config>
+    </data-source>
+    <data-source name="pg" uuid="07dd6247-b09d-4300-8906-f8366cfe81cb" type="POSTGRES">
+      <base-info connect-type="DB_DEFAULT" product="PostgreSQL" version="14.12 (Ubuntu 14.12-0ubuntu0.22.04.1)" major-version="14" minor-version="12" jdbc-name="PostgreSQL JDBC Driver" jdbc-version="42.6.0" jdbc-major-version="42" jdbc-minor-version="6" />
+      <user-name>oumar</user-name>
+      <choose-schema-mapping>
+        <introspection-scope>
+          <node negative="1">
+            <node kind="database" qname="dbjava" operator="@" />
+            <node kind="database" qname="postgres" operator="@">
+              <node kind="schema">
+                <name qname="public" />
+              </node>
+            </node>
+          </node>
+        </introspection-scope>
+      </choose-schema-mapping>
+      <url>jdbc:postgresql://localhost:5432/postgres</url>
+      <remarks />
+      <vm-options />
+      <driver-info id="postgresql" />
+      <ssh-properties enabled="false" />
+      <ssl-config enabled="false">
+        <uuid />
+        <caFile />
+        <clientCertificateFile />
+        <clientKeyFile />
+        <sslMode>REQUIRE</sslMode>
+      </ssl-config>
+    </data-source>
+  </component>
+</project>

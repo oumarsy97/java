@@ -1,10 +1,12 @@
 package views.impl;
 
 import entities.Client;
+import org.springframework.stereotype.Component;
 import views.ClientView;
 
 import java.util.List;
 
+@Component
 public class ClientViewImpl implements ClientView {
     @Override
     public void create(Client value) {

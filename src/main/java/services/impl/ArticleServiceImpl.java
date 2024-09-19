@@ -2,6 +2,7 @@ package services.impl;
 
 import articles.interfaces.ArticleRepo;
 import entities.Article;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import services.ArticleService;
 
@@ -13,6 +14,8 @@ import java.util.Optional;
 @Service
 public class ArticleServiceImpl implements ArticleService {
     protected ArticleRepo articleRepo;
+
+    @Autowired
     public ArticleServiceImpl(ArticleRepo articleRepo) {
         this.articleRepo = articleRepo;
     }
@@ -33,7 +36,7 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Override
     public Article update(int id,Article article) {
-         return articleRepo.update(id, article);
+         return articleRepo.save( article);
     }
 
     @Override
